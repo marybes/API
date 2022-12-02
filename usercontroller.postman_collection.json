@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "0708cd01-a9bb-42a9-8130-9c1897fd99ca",
+		"name": "usercontroller",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21710891"
+	},
+	"item": [
+		{
+			"name": "GET/userinfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://checker.jettycloud.com:8080/api/public/user/info/{{uid}}",
+					"protocol": "http",
+					"host": [
+						"checker",
+						"jettycloud",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"user",
+						"info",
+						"{{uid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET/usertime",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://checker.jettycloud.com:8080/api/public/user/time/{{uid}}",
+					"protocol": "http",
+					"host": [
+						"checker",
+						"jettycloud",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"user",
+						"time",
+						"{{uid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/start",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://checker.jettycloud.com:8080/api/public/user/start/{{uid}}",
+					"protocol": "http",
+					"host": [
+						"checker",
+						"jettycloud",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"user",
+						"start",
+						"{{uid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/userimport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/katra/Downloads/fileForPOSTimport.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://checker.jettycloud.com:8080/api/public/user/import",
+					"protocol": "http",
+					"host": [
+						"checker",
+						"jettycloud",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"user",
+						"import"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/submit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n  }\r\n]"
+				},
+				"url": {
+					"raw": "http://checker.jettycloud.com:8080/api/public/result/submit/{{uid2}}",
+					"protocol": "http",
+					"host": [
+						"checker",
+						"jettycloud",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"result",
+						"submit",
+						"{{uid2}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

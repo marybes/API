@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<test_cases>
+  <test_case internal_id="1571" name="GET/info с валидным UID">
+    <external_id>QBC-1001</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>В БД создан пользователь с UID&nbsp; -
+
+<span>052621e0-6a5e-11ed-a1eb-0242ac120002</span></p><div><br>
+
+</div><p><br></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p>В Postman выполнить запрос GET <span data-offset-key="aagjs-0-0">http://checker.jettycloud.com:8080/api/public/user/info/</span><span>052621e0-6a5e-11ed-a1eb-0242ac120002</span></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>1. 1.Вернется код состояния 200 OK <br></p><p>2. В body ответа вернется JSON:<div style="color: #000000;background-color: #fffffe;font-family: 'IBMPlexMono, 'Courier New', monospace', Consolas, 'Courier New', monospace;font-weight: normal;font-size: 12px;line-height: 18px;white-space: pre;"><div><span style="color: #000000;">{</span></div><div><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #a31515;">"uid"</span><span style="color: #000000;">:&nbsp;</span><span style="color: #0451a5;">"052741e0-6a5e-11ed-a1eb-0242ac120002"</span><span style="color: #000000;">,</span></div><div><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #a31515;">"name"</span><span style="color: #000000;">:&nbsp;</span><span style="color: #0451a5;">"Беспальченко&nbsp;Мария"</span></div><div><span style="color: #000000;">}</span></div></div><p></p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1572" name="GET/info с невалидным UID">
+    <external_id>QBC-1002</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>В БД создан пользователь с UID&nbsp; -
+
+<span>052621e0-6a5e-11ed-a1eb-0242ac120002</span></p><div><br>
+
+</div><p><br></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p>В Postman выполнить запрос GET, удалив последнюю цифру в UID <span data-offset-key="aagjs-0-0">http://checker.jettycloud.com:8080/api/public/user/info/</span><span>052621e0-6a5e-11ed-a1eb-0242ac12000</span></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>1.Вернется код состояния  
+
+<span>404</span><span>Not Found</span>
+
+<br></p>2. В body ответа вернется JSON:<div style="color: #000000;background-color: #fffffe;font-family: 'IBMPlexMono, 'Courier New', monospace', Consolas, 'Courier New', monospace;font-weight: normal;font-size: 12px;line-height: 18px;white-space: pre;"><div style="color: #000000;background-color: #fffffe;font-family: 'IBMPlexMono, 'Courier New', monospace', Consolas, 'Courier New', monospace;font-weight: normal;font-size: 12px;line-height: 18px;white-space: pre;"><div><span style="color: #000000;">{</span></div><div><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #a31515;">"message"</span><span style="color: #000000;">:&nbsp;</span><span style="color: #0451a5;">"User&nbsp;with&nbsp;uid&nbsp;052741e0-6a5e-11ed-a1eb-0242ac12000&nbsp;not&nbsp;found"</span></div><div><span style="color: #000000;">}</span></div></div></div><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1573" name="GET/info с отсутствующим UID">
+    <external_id>QBC-1003</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>В БД создан пользователь с UID&nbsp; -
+
+<span>052621e0-6a5e-11ed-a1eb-0242ac120002</span></p><div><br>
+
+</div><p><br></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p>В Postman выполнить запрос GET <span data-offset-key="aagjs-0-0">http://checker.jettycloud.com:8080/api/public/user/info</span><span></span></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>1.Вернется код состояния  
+
+<span>404</span><span>Not Found</span>
+
+<br></p><p>2. В body ответа вернется JSON:</p><div style="color: #000000;background-color: #fffffe;font-family: 'IBMPlexMono, 'Courier New', monospace', Consolas, 'Courier New', monospace;font-weight: normal;font-size: 12px;line-height: 18px;white-space: pre;"><div style="color: #000000;background-color: #fffffe;font-family: 'IBMPlexMono, 'Courier New', monospace', Consolas, 'Courier New', monospace;font-weight: normal;font-size: 12px;line-height: 18px;white-space: pre;"><div><span style="color: #000000;">{</span></div><div><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #a31515;">"timestamp"</span><span style="color: #000000;">:&nbsp;</span><span style="color: #098658;">1669483696311</span><span style="color: #000000;">,</span></div><div><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #a31515;">"status"</span><span style="color: #000000;">:&nbsp;</span><span style="color: #098658;">404</span><span style="color: #000000;">,</span></div><div><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #a31515;">"error"</span><span style="color: #000000;">:&nbsp;</span><span style="color: #0451a5;">"Not&nbsp;Found"</span><span style="color: #000000;">,</span></div><div><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #a31515;">"path"</span><span style="color: #000000;">:&nbsp;</span><span style="color: #0451a5;">"/api/public/user/info"</span></div><div><span style="color: #000000;">}</span></div></div></div><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1574" name="GET/time с валидным UID, где пользователь не начинал тестирование">
+    <external_id>QBC-1004</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>В БД создан пользователь с UID&nbsp; -
+
+<span>052621e0-6a5e-11ed-a1eb-0242ac120002</span></p><p><span>Пользователь не начинал тестирование </span>(не было ни start, ни submit запросов)</p><p><span><br></span></p><div><br>
+
+</div><p><br></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p>В Postman выполнить запрос GET <span data-offset-key="aagjs-0-0">http://checker.jettycloud.com:8080/api/public/user/time/</span><span>052621e0-6a5e-11ed-a1eb-0242ac120002</span></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>1.Вернется код состояния  
+
+</p><div><span><span>404</span><span>Not Found</span></span></div><p>2.В body ответа вернется JSON:</p><div style="color: #000000;background-color: #fffffe;font-family: 'IBMPlexMono, 'Courier New', monospace', Consolas, 'Courier New', monospace;font-weight: normal;font-size: 12px;line-height: 18px;white-space: pre;"><div style="color: #000000;background-color: #fffffe;font-family: 'IBMPlexMono, 'Courier New', monospace', Consolas, 'Courier New', monospace;font-weight: normal;font-size: 12px;line-height: 18px;white-space: pre;"><div style="color: #000000;background-color: #fffffe;font-family: 'IBMPlexMono, 'Courier New', monospace', Consolas, 'Courier New', monospace;font-weight: normal;font-size: 12px;line-height: 18px;white-space: pre;"><div><span style="color: #000000;">{</span></div><div><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #a31515;">"message"</span><span style="color: #000000;">:&nbsp;</span><span style="color: #0451a5;">"User&nbsp;with&nbsp;uid:&nbsp;</span><span>052621e0-6a5e-11ed-a1eb-0242ac120002</span><span style="color: #0451a5;">&nbsp;</span></div><div><span style="color: #0451a5;">has&nbsp;not&nbsp;started&nbsp;quiz&nbsp;yet"</span></div><div><span style="color: #000000;">}</span></div></div></div></div><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1828" name="GET/time с валидным UID, где пользователь начал тестирование">
+    <external_id>QBC-1206</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>В БД создан пользователь с UID&nbsp; -
+
+<span>052621e0-6a5e-11ed-a1eb-0242ac120002</span></p><p><span>Пользователь начал тестирование </span>(выполнен метод <span data-offset-key="aagjs-0-0">http://checker.jettycloud.com:8080/api/public/user/<b>start</b>/</span><span>052621e0-6a5e-11ed-a1eb-0242ac120002</span>)</p><p><span><br></span></p><div><br>
+
+</div><p><br></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p>В Postman выполнить запрос GET <span data-offset-key="aagjs-0-0">http://checker.jettycloud.com:8080/api/public/user/time/</span><span>052621e0-6a5e-11ed-a1eb-0242ac120002</span></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>1.Вернется код состояния 200ок<br></p><p>2.В body ответа вернется JSON:</p><div style="color: #000000;background-color: #fffffe;font-family: 'IBMPlexMono, 'Courier New', monospace', Consolas, 'Courier New', monospace;font-weight: normal;font-size: 12px;line-height: 18px;white-space: pre;"><div style="color: #000000;background-color: #fffffe;font-family: 'IBMPlexMono, 'Courier New', monospace', Consolas, 'Courier New', monospace;font-weight: normal;font-size: 12px;line-height: 18px;white-space: pre;"><div style="color: #000000;background-color: #fffffe;font-family: 'IBMPlexMono, 'Courier New', monospace', Consolas, 'Courier New', monospace;font-weight: normal;font-size: 12px;line-height: 18px;white-space: pre;"><div style="color: #000000;background-color: #fffffe;font-family: 'IBMPlexMono, 'Courier New', monospace', Consolas, 'Courier New', monospace;font-weight: normal;font-size: 12px;line-height: 18px;white-space: pre;"><div><span style="color: #000000;">{</span></div><div><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #a31515;">"name"</span><span style="color: #000000;">:&nbsp;</span><span style="color: #0451a5;">"Беспальченко&nbsp;Мария"</span><span style="color: #000000;">,</span></div><div><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #a31515;">"timeLeft"</span><span style="color: #000000;">:&nbsp;</span><span style="color: #098658;">2959</span></div><div><span style="color: #000000;">}</span></div></div></div></div></div><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1829" name="GET/time с валидным UID, где пользователь начал и закончил тестирование">
+    <external_id>QBC-1207</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>В БД создан пользователь с UID&nbsp; -
+
+<span>052621e0-6a5e-11ed-a1eb-0242ac120002</span></p><p><span>Пользователь начал и закончил тестирование </span>(выполнены методы:</p><p> <span data-offset-key="aagjs-0-0">- http://checker.jettycloud.com:8080/api/public/user/<b>start</b>/</span><span>052621e0-6a5e-11ed-a1eb-0242ac120002;</span></p><p> <span style="color: rgb(33, 33, 33); font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">- http://checker.jettycloud.com:8080/api/public/result/<b>submit</b>/</span><span>052621e0-6a5e-11ed-a1eb-0242ac120002</span>)</p><p><span><br></span></p><div><br>
+
+</div><p><br></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p>В Postman выполнить запрос GET <span data-offset-key="aagjs-0-0">http://checker.jettycloud.com:8080/api/public/user/time/</span><span>052621e0-6a5e-11ed-a1eb-0242ac120002</span></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>1.Вернется код состояния 200ок<br></p><p>2.В body ответа вернется JSON:</p><div style="color: #000000;background-color: #fffffe;font-family: 'IBMPlexMono, 'Courier New', monospace', Consolas, 'Courier New', monospace;font-weight: normal;font-size: 12px;line-height: 18px;white-space: pre;"><div style="color: #000000;background-color: #fffffe;font-family: 'IBMPlexMono, 'Courier New', monospace', Consolas, 'Courier New', monospace;font-weight: normal;font-size: 12px;line-height: 18px;white-space: pre;"><div style="color: #000000;background-color: #fffffe;font-family: 'IBMPlexMono, 'Courier New', monospace', Consolas, 'Courier New', monospace;font-weight: normal;font-size: 12px;line-height: 18px;white-space: pre;"><div style="color: #000000;background-color: #fffffe;font-family: 'IBMPlexMono, 'Courier New', monospace', Consolas, 'Courier New', monospace;font-weight: normal;font-size: 12px;line-height: 18px;white-space: pre;"><div style="color: #000000;background-color: #fffffe;font-family: 'IBMPlexMono, 'Courier New', monospace', Consolas, 'Courier New', monospace;font-weight: normal;font-size: 12px;line-height: 18px;white-space: pre;"><div><span style="color: #000000;">{</span></div><div><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #a31515;">"name"</span><span style="color: #000000;">:&nbsp;</span><span style="color: #0451a5;">"Беспальченко&nbsp;Мария"</span><span style="color: #000000;">,</span></div><div><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #a31515;">"timeLeft"</span><span style="color: #000000;">:&nbsp;</span><span style="color: #098658;">2484</span></div><div><span style="color: #000000;">}</span></div></div></div></div></div></div><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1575" name="POST/start с валидным UID">
+    <external_id>QBC-1005</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>В БД создан пользователь с UID&nbsp; -
+
+<span>052621e0-6a5e-11ed-a1eb-0242ac120002</span></p><div><br>
+
+</div><p><br></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p>В Postman выполнить запрос GET <span data-offset-key="aagjs-0-0">http://checker.jettycloud.com:8080/api/public/user/start/</span><span>052621e0-6a5e-11ed-a1eb-0242ac120002</span></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>1.Вернется код состояния 200 OK&nbsp;</p><p>2.В body ответа вернется пустое поле</p><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1576" name="POST/SUBMIT с валидным UID">
+    <external_id>QBC-1006</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>1. В БД создан пользователь с UID&nbsp; -
+
+<span>052621e0-6a5e-11ed-a1eb-0242ac120002</span></p><div>2. Отправить POST запрос в Postman <span data-offset-key="aagjs-0-0">http://checker.jettycloud.com:8080/api/public/user/<b>start</b>/</span><span>052621e0-6a5e-11ed-a1eb-0242ac120002</span>
+
+</div><p><br></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p>В Postman выполнить запрос POST <span style="color: rgb(33, 33, 33); font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">http://checker.jettycloud.com:8080/api/public/result/submit/</span><span>052621e0-6a5e-11ed-a1eb-0242ac120002</span><span></span></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>1.Вернется код состояния <span>200 ok</span><span></span>
+
+</p><p>2.Body ответа вернется пустым</p><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1827" name="Повторное выполнение POST/SUBMIT с валидным UID">
+    <external_id>QBC-1205</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>1. В БД создан пользователь с UID&nbsp; -
+
+<span>052621e0-6a5e-11ed-a1eb-0242ac120002</span></p><div>2. Ранее уже был отправден запрос в Postman <span style="color: rgb(33, 33, 33); font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">http://checker.jettycloud.com:8080/api/public/result/submit/</span><span>052621e0-6a5e-11ed-a1eb-0242ac120002</span>
+
+</div><p><br></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p>В Postman выполнить запрос POST <span style="color: rgb(33, 33, 33); font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">http://checker.jettycloud.com:8080/api/public/result/submit/</span><span>052621e0-6a5e-11ed-a1eb-0242ac120002</span><span></span></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>1.Вернется код состояния <span>208 ok</span><span></span>
+
+</p><p>2.В body ответа вернется JSON </p><div style="color: #000000;background-color: #fffffe;font-family: 'IBMPlexMono, 'Courier New', monospace', Consolas, 'Courier New', monospace;font-weight: normal;font-size: 12px;line-height: 18px;white-space: pre;"><div><span style="color: #000000;">{</span></div><div><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #a31515;">"message"</span><span style="color: #000000;">:&nbsp;</span><span style="color: #0451a5;">"Quiz&nbsp;for&nbsp;user&nbsp;uid:&nbsp;05242765-6a5e-12ed-a1eb-0242ac120002&nbsp;already&nbsp;done"</span></div><div><span style="color: #000000;">}</span></div></div><p></p><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+</test_cases>

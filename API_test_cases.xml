@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<test_cases>
+  <test_case internal_id="1927" name="Авторизация с валидным UID">
+    <external_id>QBC-1286</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>В базу данных добавлен пользователь с UID <span style="font-size:10pt;font-family:Arial;font-style:normal;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;052322e8-6a5e-13ed-a1eb-0242ac120002&quot;}" data-sheets-userformat="{&quot;2&quot;:5053,&quot;3&quot;:{&quot;1&quot;:0},&quot;5&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;6&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;7&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;8&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;10&quot;:2,&quot;11&quot;:0,&quot;12&quot;:0,&quot;15&quot;:&quot;Arial&quot;}">052322e8-6a5e-13ed-a1eb-0242ac120002</span><style type="text/css">td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}</style></p><p></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p> 
+<app-summernote-editor _ngcontent-gad-c270="" id="step1_1"></app-summernote-editor></p><div data-cy="summernote-editable"><p><span "font-size:11.0pt;line-height:107%;="" font-family:&quot;calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:="" &quot;times="" new="" roman&quot;;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;times="" roman&quot;;="" mso-bidi-theme-font:minor-bidi;mso-ansi-language:ru;mso-fareast-language:ru;="" mso-bidi-language:ar-sa"="">В браузере, в адресную строку прописываем ссылку: </span><span>http://checker.jettycloud.com/052322e8-6a5e-13ed-a1eb-0242ac120002</span><span></span></p></div>
+
+<br><p></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>Открывается страница приложения</p><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1928" name="Авторизация без UID">
+    <external_id>QBC-1287</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p><br></p><p></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p> 
+<app-summernote-editor _ngcontent-gad-c270="" id="step1_1"></app-summernote-editor></p><div data-cy="summernote-editable"><p><span "font-size:11.0pt;line-height:107%;="" font-family:&quot;calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:="" &quot;times="" new="" roman&quot;;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;times="" roman&quot;;="" mso-bidi-theme-font:minor-bidi;mso-ansi-language:ru;mso-fareast-language:ru;="" mso-bidi-language:ar-sa"="">В браузере, в адресную строку прописываем ссылку: </span><span>http://checker.jettycloud.com</span><span></span></p></div>
+
+<br><p></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>Отображается ошибка 404. Страница не найдена.<br></p><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1929" name="Запуск тестирования с валидным UID">
+    <external_id>QBC-1288</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>В базу данных добавлен пользователь с UID <span style="font-size:10pt;font-family:Arial;font-style:normal;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;052322e8-6a5e-13ed-a1eb-0242ac120002&quot;}" data-sheets-userformat="{&quot;2&quot;:5053,&quot;3&quot;:{&quot;1&quot;:0},&quot;5&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;6&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;7&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;8&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;10&quot;:2,&quot;11&quot;:0,&quot;12&quot;:0,&quot;15&quot;:&quot;Arial&quot;}">052322e8-6a5e-13ed-a1eb-0242ac120002</span></p><p></p><p></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p> 
+<app-summernote-editor _ngcontent-gad-c270="" id="step1_1"></app-summernote-editor></p><div data-cy="summernote-editable"><div data-cy="summernote-editable"><p><span>В браузере, в адресную строку прописываем ссылку: </span><span>http://checker.jettycloud.com/052322e8-6a5e-13ed-a1eb-0242ac120002</span><span></span></p></div>
+
+</div><div data-cy="summernote-editable"><p></p></div>
+
+<br><p></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>Открывается страница приложения, есть возможность&nbsp; дальнейшего перехода на прохождение тестирования</p><p></p><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+      <step>
+        <order>2</order>
+        <name>
+          <![CDATA[Прокрутить страницу до конца и поставить галочку " <span style="color: rgba(0, 0, 0, 0.85); font-family: -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Я ознакомился(лась) с правилами"</span>. Нажать на кнопку "Начать тестирование"<br>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p><span style="font-family: Calibri, sans-serif; font-size: 14.6667px;">Кнопка активна. При нажатии открывается страница с началом тестирования, где отображается имя и фамилия пользователя соответствующего UID. <br>Под именем отображается отсчет 50ти минут. <br></span></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1930" name="Запуск тестирования с невалидным UID">
+    <external_id>QBC-1289</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p><br></p><p></p><p></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p> 
+<app-summernote-editor _ngcontent-gad-c270="" id="step1_1"></app-summernote-editor></p><div data-cy="summernote-editable"><div data-cy="summernote-editable"><p><span>В браузере, в адресную строку прописываем ссылку: </span><span>http://checker.jettycloud.com/123</span><span></span></p></div>
+
+</div><div data-cy="summernote-editable"><p></p></div>
+
+<br><p></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>Открывается страница приложения<br></p><p></p><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+      <step>
+        <order>2</order>
+        <name>
+          <![CDATA[Прокрутить страницу до конца и поставить галочку " <span style="color: rgba(0, 0, 0, 0.85); font-family: -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Я ознакомился(лась) с правилами"</span>. Нажать на кнопку "Начать тестирование"<br>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>Отображается сообщение "Вы не можете пройти тест! Пожалуйста, напишите в поддержку, если вы считаете , что это ошибка."<br>Под ним находится кнопка почты поддержки. <br></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1931" name="Проверка кнопки адреса почты технической поддержки">
+    <external_id>QBC-1290</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p><br></p><p></p><p></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p> 
+<app-summernote-editor _ngcontent-gad-c270="" id="step1_1"></app-summernote-editor></p><div data-cy="summernote-editable"><div data-cy="summernote-editable"><p><span>В браузере, в адресную строку прописываем ссылку: </span><span>http://checker.jettycloud.com/123</span><span></span></p></div>
+
+</div><div data-cy="summernote-editable"><p></p></div>
+
+<br><p></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>Открывается страница приложения.<br></p><p></p><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+      <step>
+        <order>2</order>
+        <name>
+          <![CDATA[Прокрутить страницу до конца и поставить галочку " <span style="color: rgba(0, 0, 0, 0.85); font-family: -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Я ознакомился(лась) с правилами"</span>. Нажать на кнопку "Начать тестирование"<br>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>Отображается сообщение "Вы не можете пройти тест! Пожалуйста, напишите в поддержку, если вы считаете , что это ошибка."<br>Под ним находится кнопка адреса почты техподдержки. <br></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+      <step>
+        <order>3</order>
+        <name>
+          <![CDATA[<p>Нажать на кнопку адреса почты<br></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>Происходит переход в почту, где в адресной строке "Кому" указан адрес технической поддержки.</p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1933" name="Прохождение тестирования с валидным UID">
+    <external_id>QBC-1292</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>В базу данных добавлен пользователь с UID <span style="font-size:10pt;font-family:Arial;font-style:normal;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;052322e8-6a5e-13ed-a1eb-0242ac120002&quot;}" data-sheets-userformat="{&quot;2&quot;:5053,&quot;3&quot;:{&quot;1&quot;:0},&quot;5&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;6&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;7&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;8&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;10&quot;:2,&quot;11&quot;:0,&quot;12&quot;:0,&quot;15&quot;:&quot;Arial&quot;}">052322e8-6a5e-13ed-a1eb-0242ac120002</span></p><p>Перейти по ссылке <span>http://checker.jettycloud.com/052322e8-6a5e-13ed-a1eb-0242ac120002</span></p><p>Прокрутить страницу до конца и поставить галочку " <span style="color: rgba(0, 0, 0, 0.85); font-family: -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Я ознакомился(лась) с правилами"</span>. </p><p>Нажать на кнопку "Начать тестирование"</p><p></p><p></p><p></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p>Последовательно пройти все вопросы теста (отвечать можно наобум)<br></p><p></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>Ответы принимаются. После ответа на последний вопрос на странице появляется надпись "Задание успешно отправлено".</p><p>Результаты ответов есть в базе данных под изначально взятым для теста uid</p><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1939" name="Повторное прохождение тестирования с валидным UID">
+    <external_id>QBC-1298</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>В базу данных добавлен пользователь с UID <span style="font-size:10pt;font-family:Arial;font-style:normal;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;052322e8-6a5e-13ed-a1eb-0242ac120002&quot;}" data-sheets-userformat="{&quot;2&quot;:5053,&quot;3&quot;:{&quot;1&quot;:0},&quot;5&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;6&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;7&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;8&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;10&quot;:2,&quot;11&quot;:0,&quot;12&quot;:0,&quot;15&quot;:&quot;Arial&quot;}">052322e8-6a5e-13ed-a1eb-0242ac120002</span></p><p>Перейти по ссылке <span>http://checker.jettycloud.com/052322e8-6a5e-13ed-a1eb-0242ac120002</span></p><br><p></p><p></p><p></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p>Прокрутить страницу до конца и поставить галочку " <span style="color: rgba(0, 0, 0, 0.85); font-family: -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Я ознакомился(лась) с правилами"</span>. </p><p>Нажать на кнопку "Начать тестирование"</p><p></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>Отображается сообщение "Задание успешно отправлено!"</p><p>Под ним находится кнопка почты поддержки. </p><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1932" name="Изменение масштаба страницы">
+    <external_id>QBC-1291</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>В базу данных добавлен пользователь с UID <span style="font-size:10pt;font-family:Arial;font-style:normal;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;052322e8-6a5e-13ed-a1eb-0242ac120002&quot;}" data-sheets-userformat="{&quot;2&quot;:5053,&quot;3&quot;:{&quot;1&quot;:0},&quot;5&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;6&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;7&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;8&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;10&quot;:2,&quot;11&quot;:0,&quot;12&quot;:0,&quot;15&quot;:&quot;Arial&quot;}">052322e8-6a5e-13ed-a1eb-0242ac120002</span></p><p>Перейти по ссылке <span>http://checker.jettycloud.com/052322e8-6a5e-13ed-a1eb-0242ac120002</span></p><p></p><p></p><p></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p><span style="font-size:11.0pt;line-height:107%;
+font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:
+Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;
+mso-ansi-language:RU;mso-fareast-language:RU;mso-bidi-language:AR-SA">Меняем масштаб страницы комбинацией клавиш </span><span style="font-size:11.0pt;line-height:107%;
+font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:
+Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;
+mso-ansi-language:EN-US;mso-fareast-language:RU;mso-bidi-language:AR-SA" lang="EN-US">ctrl</span><span style="font-size:11.0pt;line-height:107%;font-family:&quot;Calibri&quot;,sans-serif;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-theme-font:minor-bidi;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA">+"+" и </span><span style="font-size:11.0pt;
+line-height:107%;font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:
+minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;
+mso-ansi-language:EN-US;mso-fareast-language:RU;mso-bidi-language:AR-SA" lang="EN-US">ctrl</span><span style="font-size:11.0pt;line-height:107%;font-family:&quot;Calibri&quot;,sans-serif;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-theme-font:minor-bidi;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA">+“-”.</span></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[Верстка отображается корректно, согласно макету, масштаб меняется.<br><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1934" name="Проверка совместимости с браузером Firefox">
+    <external_id>QBC-1293</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>В базу данных добавлен пользователь с UID <span style="font-size:10pt;font-family:Arial;font-style:normal;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;052322e8-6a5e-13ed-a1eb-0242ac120002&quot;}" data-sheets-userformat="{&quot;2&quot;:5053,&quot;3&quot;:{&quot;1&quot;:0},&quot;5&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;6&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;7&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;8&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;10&quot;:2,&quot;11&quot;:0,&quot;12&quot;:0,&quot;15&quot;:&quot;Arial&quot;}">052322e8-6a5e-13ed-a1eb-0242ac120002</span></p><p><br></p><p></p><p></p><p></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p>В браузере Firefox перейти по ссылке <span>http://checker.jettycloud.com/052322e8-6a5e-13ed-a1eb-0242ac120002</span></p><p></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[Структура сайта не нарушена. Верстка отображается корректно, согласно макету. Кнопки и вкладки функционируют в соответствии 
+требованиям.<p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1935" name="Проверка совместимости с браузером Safari">
+    <external_id>QBC-1294</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>В базу данных добавлен пользователь с UID <span style="font-size:10pt;font-family:Arial;font-style:normal;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;052322e8-6a5e-13ed-a1eb-0242ac120002&quot;}" data-sheets-userformat="{&quot;2&quot;:5053,&quot;3&quot;:{&quot;1&quot;:0},&quot;5&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;6&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;7&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;8&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;10&quot;:2,&quot;11&quot;:0,&quot;12&quot;:0,&quot;15&quot;:&quot;Arial&quot;}">052322e8-6a5e-13ed-a1eb-0242ac120002</span></p><p></p><p></p><p></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p>В браузере Safari перейти по ссылке <span>http://checker.jettycloud.com/052322e8-6a5e-13ed-a1eb-0242ac120002</span></p><p></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[Структура сайта не нарушена. Верстка отображается корректно, согласно макету. Кнопки и вкладки функционируют в соответствии 
+требованиям.<p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1936" name="Проверка совместимости с браузером Google Chrome">
+    <external_id>QBC-1295</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>В базу данных добавлен пользователь с UID <span style="font-size:10pt;font-family:Arial;font-style:normal;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;052322e8-6a5e-13ed-a1eb-0242ac120002&quot;}" data-sheets-userformat="{&quot;2&quot;:5053,&quot;3&quot;:{&quot;1&quot;:0},&quot;5&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;6&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;7&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;8&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;10&quot;:2,&quot;11&quot;:0,&quot;12&quot;:0,&quot;15&quot;:&quot;Arial&quot;}">052322e8-6a5e-13ed-a1eb-0242ac120002</span></p><p></p><p></p><p></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p>В браузере  
+<span _ngcontent-rvg-c247="" id="taskNameInput" data-cy="name-editor" contenteditable="true">Google Chrome</span>
+
+перейти по ссылке <span>http://checker.jettycloud.com/052322e8-6a5e-13ed-a1eb-0242ac120002</span></p><p></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[Верстка отображается корректно, согласно макету, масштаб меняется.<br><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1937" name="Проверка макета сайта через DevTools">
+    <external_id>QBC-1296</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>В базу данных добавлен пользователь с UID <span style="font-size:10pt;font-family:Arial;font-style:normal;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;052322e8-6a5e-13ed-a1eb-0242ac120002&quot;}" data-sheets-userformat="{&quot;2&quot;:5053,&quot;3&quot;:{&quot;1&quot;:0},&quot;5&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;6&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;7&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;8&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;10&quot;:2,&quot;11&quot;:0,&quot;12&quot;:0,&quot;15&quot;:&quot;Arial&quot;}">052322e8-6a5e-13ed-a1eb-0242ac120002</span></p><p>Перейти по ссылке <span>http://checker.jettycloud.com/052322e8-6a5e-13ed-a1eb-0242ac120002</span></p><p></p><p></p><p></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p>Через devtools изменить разрешение на  
+<span lang="ru"><span><b>1366x768</b></span></span>
+
+</p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[Сайт отображается корректно, согласно макету, масштаб меняется.<br><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+      <step>
+        <order>2</order>
+        <name>
+          <![CDATA[<p>Через devtools изменить разрешение на 1920х1080</p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>Сайт отображается корректно, согласно макету, масштаб меняется.</p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+      <step>
+        <order>3</order>
+        <name>
+          <![CDATA[<p>Через devtools изменить разрешение на 1280х1024</p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p> 
+<app-summernote-editor _ngcontent-rvg-c270="" id="step2_2"><div data-cy="summernote-editable"><p>Сайт отображается корректно, согласно макету, масштаб меняется.</p></div></app-summernote-editor>
+
+<br></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+      <step>
+        <order>4</order>
+        <name>
+          <![CDATA[<p>Через devtools изменить разрешение на 640х480</p><p></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<div data-cy="summernote-editable"><p>Сайт отображается корректно, согласно макету, масштаб меняется.</p></div><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+      <step>
+        <order>5</order>
+        <name>
+          <![CDATA[<p>Через devtools изменить разрешение на 1024х768</p><p></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<div data-cy="summernote-editable"><p>Сайт отображается корректно, согласно макету, масштаб меняется.</p></div><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1940" name="Проверка отображения материалов для дополнительной подготовки">
+    <external_id>QBC-1299</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>В базу данных добавлен пользователь с UID <span style="font-size:10pt;font-family:Arial;font-style:normal;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;052322e8-6a5e-13ed-a1eb-0242ac120002&quot;}" data-sheets-userformat="{&quot;2&quot;:5053,&quot;3&quot;:{&quot;1&quot;:0},&quot;5&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;6&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;7&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;8&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;10&quot;:2,&quot;11&quot;:0,&quot;12&quot;:0,&quot;15&quot;:&quot;Arial&quot;}">052322e8-6a5e-13ed-a1eb-0242ac120002</span></p><p>Перейти по ссылке <span>http://checker.jettycloud.com/052322e8-6a5e-13ed-a1eb-0242ac120002</span></p><p></p><p></p><p></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p>Прокликать все имеющиеся вкладки в разделе "Материалы для дополнительной подготовки"
+
+ (JAVA, SQL, Клиент-серверная архитектура)</p><p></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[Происходит переход на вкладку материалов по соответствующей теме. Можно свободно перемещаться по всем вкладкам.<br><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+  <test_case internal_id="1938" name="Проверка скроллинга">
+    <external_id>QBC-1297</external_id>
+    <summary>
+      <![CDATA[]]>
+    </summary>
+    <preconditions>
+      <![CDATA[<p>В базу данных добавлен пользователь с UID <span style="font-size:10pt;font-family:Arial;font-style:normal;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;052322e8-6a5e-13ed-a1eb-0242ac120002&quot;}" data-sheets-userformat="{&quot;2&quot;:5053,&quot;3&quot;:{&quot;1&quot;:0},&quot;5&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;6&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;7&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;8&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;10&quot;:2,&quot;11&quot;:0,&quot;12&quot;:0,&quot;15&quot;:&quot;Arial&quot;}">052322e8-6a5e-13ed-a1eb-0242ac120002</span></p><p>Перейти по ссылке <a href="http://checker.jettycloud.com/052322e8-6a5e-13ed-a1eb-0242ac120002" target="_blank">http://checker.jettycloud.com/052322e8-6a5e-13ed-a1eb-0242ac120002</a></p><p></p><p></p><p></p>]]>
+    </preconditions>
+    <steps>
+      <step>
+        <order>1</order>
+        <name>
+          <![CDATA[<p>Прокрутить страницу до конца сайта<br></p><p></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<div data-cy="summernote-editable"><p>Сайт отображается корректно, скроллинг происходит плавно<br></p></div><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+      <step>
+        <order>2</order>
+        <name>
+          <![CDATA[<p>Нажать на кнопку прокрутки страницы вверх<br></p>]]>
+        </name>
+        <expected_result>
+          <![CDATA[<p>Осуществляется возврат в начало страницы</p><p></p>]]>
+        </expected_result>
+        <execution_type_id>0</execution_type_id>
+      </step>
+    </steps>
+    <custom_fields/>
+    <behaviour_groups/>
+    <execution_type>0</execution_type>
+    <priority>2</priority>
+  </test_case>
+</test_cases>
